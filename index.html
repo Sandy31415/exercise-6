@@ -1,6 +1,7 @@
-<!DOCTYPE html>
+<!DOCTYPE html lang="en-CA">
 <html>
 <head>
+<meta charset="UTF-8">
 <title>Exercise 7: Banh Mi, menus, and layout</title>
 <!-- This is embed code for Google fonts, take a look at  https://fonts.google.com/ for more info, you can just pick fonts and get an embed code which you use here. See how I am controlling them from <style> most of the CSS is just pasted in from Google and I have made tweaks to the weights and added other bits. This is what we will learn next week.-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,6 +17,9 @@
   font-variation-settings: "wdth" 100;
   font-size: 16px;
   width: 960px;
+    background-color: #e3bdff;
+    margin: 0 auto;
+    padding: 10px
 }
    
   h1 {
@@ -23,9 +27,13 @@
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
+    text-align: center;
+    font-size: 2em;
+    
   }
   
   #site-title {
+    font-size: 3em;
   }
   
   nav {
@@ -33,7 +41,14 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-    
+  text-align: center;
+  font-size: 1.25em
+  }
+  nav a{
+    text-decoration: none;
+  }
+  nav a:hover{
+    color: #fffbe6;
   }
   
   footer {
@@ -41,12 +56,42 @@
   
   ul{
     list-style-type: none;
-    margin:0;
-    padding: 0; 
+    margin: 5px;
+    padding: 5px; 
   }
   
   ul li{
     display: inline-block;
+    margin: 10px;
+
+  }
+  .container{
+    display: grid;
+     grid-template-columns: auto auto;
+    gap: 20px
+  }
+  .sandwich h2{
+    text-align: center;
+  }
+  .sandwich p{
+    text-align: center;
+    font-size: 1em
+  }
+  .sandwich img{
+    width:400px;
+  }
+  .sandwich{
+    margin:10px;
+    background:#fffbe6
+  }
+ 
+  footer{
+    text-align: center;
+    padding: 20px 30px;
+    margin: 10px auto;
+    max-width: 500px;
+    font-size: 1.25em;
+    background-color:#fffbe6 
   }
   
 </style>
@@ -60,15 +105,34 @@
 <li><a href="/">Contact</a></li>   
 </ul>
 </nav>
-<h1>At Greg's Banh Mi, we're serving up the perfect marriage of French and Vietnamese culinary traditions—crispy-on-the-outside, pillowy-on-the-inside baguettes loaded with bold, fresh flavorus that'll make your taste buds sing.</h1>
+
+  <h1>At Greg's Banh Mi, we're serving up the perfect marriage of French and Vietnamese culinary traditions—crispy-on-the-outside, pillowy-on-the-inside baguettes loaded with bold, fresh flavous that'll make your taste buds sing.</h1>
+  <div class="container">
+    <div class="sandwich">
+      <img src="bahn-mi.jpg" alt="banh mi sandwich">
 <h2>Classic Pork Banh Mi</h2>
 <p>Tender marinated pork topped with crisp pickled vegetables, fresh cilantro, and a smear of pâté on a perfectly crusty baguette. A traditional favorite that balances savory, sweet, and tangy flavors in every bite.</p>
+       </div>
+       
+    <div class="sandwich">
+       <img src="bahn-mi.jpg" alt="banh mi sandwich">
 <h2>Lemongrass Chicken Banh Mi</h2>
 <p>Grilled chicken marinated in fragrant lemongrass and garlic, paired with cucumber, jalapeños, and our house mayo. Light yet satisfying, this sandwich brings bright, aromatic flavors that'll transport you straight to Saigon.</p>
+       </div>
+    
+      <div class="sandwich">
+         <img src="bahn-mi.jpg" alt="banh mi sandwich">
 <h2>Tofu Banh Mi</h2>
 <p>Crispy pan-fried tofu glazed in sweet soy sauce, layered with daikon, carrots, and fresh herbs for a vegetarian delight. Proof that plant-based can be just as bold and craveable as any meat-filled sandwich.</p>
+         </div>
+ <div class="sandwich">
+    <img src="bahn-mi.jpg" alt="banh mi sandwich">
 <h2>Five-Spice Beef Banh Mi</h2>
 <p>Thinly sliced beef seared with aromatic five-spice blend and served with pickled vegetables and spicy Sriracha mayo. Rich, warming spices meet cool, crunchy toppings for an unforgettable flavor experience.</p>
+    </div>
+  </div>
+  
 <footer>Because life's too short for boring sandwiches. Greg's got you covered—one crispy baguette at a time.</footer>
+  
 </body>
 </html>
